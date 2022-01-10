@@ -1,0 +1,1 @@
+web: gunicorn psixologik_test.wsgi

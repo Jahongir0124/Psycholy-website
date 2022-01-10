@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Document</title>
+</head>
+    <link rel="stylesheet" href="{% static '/login_style.css' %}">
+<body>
+		<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active">Registration</h2>
+
+
+    <!-- Icon -->
+<!--     <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div> -->
+
+    <!-- Login Form -->
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Foydalanuvchi nomi">
+      <input type="text" id="first_name" class="fadeIn second" name="first_name" placeholder="Ismingiz">
+      <input type="text" id="last_name" class="fadeIn second" name="last_name" placeholder="Familiyangiz">
+      <input type="text" id="email" class="fadeIn third" name="email" placeholder="Elektron Pochta">
+      <input type="text" id="password" class="fadeIn third " name="password" placeholder="Parol">
+      <input type="submit" class="fadeIn fourth" value="Ro'yhatdan o'tish">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+
+    </div>
+
+  </div>
+</div>
+{% if alr %}
+  <h1>salom</h1>
+{% endif %}
+</body>
+</html>
